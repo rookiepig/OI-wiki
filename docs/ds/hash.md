@@ -174,7 +174,7 @@ class Hash {
     // 修改成不为 0 的值 0 时候视为空
     int idx = (n % N + N) % N, cnt = 1;
     while (keys[idx] != n && values[idx] != 0) {
-      idx = (idx + cnt * cnt) % N;
+      idx = (idx + cnt) % N;
       cnt += 1;
     }
     keys[idx] = n;
